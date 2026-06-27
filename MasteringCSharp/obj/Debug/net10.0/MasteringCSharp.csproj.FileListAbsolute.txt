@@ -12,3 +12,4 @@
 /Users/jamesgorospe/MasteringCSharp/MasteringCSharp/obj/Debug/net10.0/MasteringCSharp.pdb
 /Users/jamesgorospe/MasteringCSharp/MasteringCSharp/obj/Debug/net10.0/MasteringCSharp.genruntimeconfig.cache
 /Users/jamesgorospe/MasteringCSharp/MasteringCSharp/obj/Debug/net10.0/ref/MasteringCSharp.dll
+/Users/jamesgorospe/MasteringCSharp/MasteringCSharp/obj/Debug/net10.0/MasteringCSharp.sourcelink.json

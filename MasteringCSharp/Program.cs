@@ -1,13 +1,13 @@
-﻿int firstNumber;
-int secondNumber;
+﻿double firstNumber;
+double secondNumber;
 
 Console.WriteLine("Type first number: ");
 string firstInput = Console.ReadLine();
-firstNumber = int.Parse(firstInput);
+firstNumber = double.Parse(firstInput);
 
 
 Console.WriteLine("Type second number: ");
 string secondInput = Console.ReadLine();
-secondNumber = int.Parse(secondInput);
+secondNumber = double.Parse(secondInput);
 
 Console.WriteLine($"Your sum: {firstNumber + secondNumber}");
