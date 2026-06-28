@@ -11,6 +11,7 @@ namespace MyApplication
             Console.WriteLine("2. Adventure Game");
             Console.WriteLine("3. Array Row Sums");
             Console.WriteLine("4. Object Practice");
+            Console.WriteLine("5. Customer");
 
             string choice = Console.ReadLine();
 
@@ -83,6 +84,14 @@ namespace MyApplication
                 human.Nationality =  Console.ReadLine();
                 Console.WriteLine($"Modified name {human.Name} with age of {human.Age} and nationality of {human.Nationality}");
             } 
+            else if (choice == "5")
+            {
+                Customer toji = new Customer("toji");
+                Customer megumi = new Customer("megumi", "shibuya", "12345");
+                
+                Console.WriteLine($"Customer Name: {toji.Name}");
+                Console.WriteLine($"Customer Name: {megumi.Name}, Customer Address: {megumi.Address}, Customer Number: {megumi.ContactNumber}");
+            }
         }
     }
 }
