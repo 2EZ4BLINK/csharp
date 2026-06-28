@@ -1,67 +1,87 @@
-﻿Console.WriteLine("Choose a program:");
-Console.WriteLine("1. Calculator");
-Console.WriteLine("2. Adventure Game");
+﻿using System;
 
-string choice = Console.ReadLine();
-
-if (choice == "1")
+namespace MyApplication
 {
-    Console.Write("Enter your first number: ");
-    double firstNumber = double.Parse(Console.ReadLine());
-
-    Console.Write("Enter your second number: ");
-    double secondNumber = double.Parse(Console.ReadLine());
-
-    Console.Write("Choose an operation (-,+,*,/): ");
-    char chosenOperator = Console.ReadLine()[0];
-
-    if (chosenOperator == '+')
+    internal class Program
     {
-        Console.WriteLine(firstNumber + secondNumber);
-    }
-    else if (chosenOperator == '-')
-    {
-        Console.WriteLine(firstNumber - secondNumber);
-    }
-    else if (chosenOperator == '*')
-    {
-        Console.WriteLine(firstNumber * secondNumber);
-    }
-    else if (chosenOperator == '/')
-    {
-        if (secondNumber == 0)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Cannot divide by zero.");
-        }
-        else
-        {
-            Console.WriteLine(firstNumber / secondNumber);
-        }
-    }
-}
-else if (choice == "2")
-{
-    AdventureGame adventure = new AdventureGame();
-    adventure.Start();
-}
-else if (choice == "3")
-{
-    int[,] array =
-    {
-        { 1, 2, 3 },
-        { 4, 5, 6 },
-        { 7, 8, 9 }
-    };
+            Console.WriteLine("Choose a program:");
+            Console.WriteLine("1. Calculator");
+            Console.WriteLine("2. Adventure Game");
+            Console.WriteLine("3. Array Row Sums");
+            Console.WriteLine("4. Object Practice");
 
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        int sum = 0;
+            string choice = Console.ReadLine();
 
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            sum += array[i, j];
+            if (choice == "1")
+            {
+                Console.Write("Enter your first number: ");
+                double firstNumber = double.Parse(Console.ReadLine());
+
+                Console.Write("Enter your second number: ");
+                double secondNumber = double.Parse(Console.ReadLine());
+
+                Console.Write("Choose an operation (-,+,*,/): ");
+                char chosenOperator = Console.ReadLine()[0];
+
+                if (chosenOperator == '+')
+                {
+                    Console.WriteLine(firstNumber + secondNumber);
+                }
+                else if (chosenOperator == '-')
+                {
+                    Console.WriteLine(firstNumber - secondNumber);
+                }
+                else if (chosenOperator == '*')
+                {
+                    Console.WriteLine(firstNumber * secondNumber);
+                }
+                else if (chosenOperator == '/')
+                {
+                    if (secondNumber == 0)
+                    {
+                        Console.WriteLine("Cannot divide by zero.");
+                    }
+                    else
+                    {
+                        Console.WriteLine(firstNumber / secondNumber);
+                    }
+                }
+            }
+            else if (choice == "2")
+            {
+                AdventureGame adventure = new AdventureGame();
+                adventure.Start();
+            }
+            else if (choice == "3")
+            {
+                int[,] array =
+                {
+                    { 1, 2, 3 },
+                    { 4, 5, 6 },
+                    { 7, 8, 9 }
+                };
+
+                for (int i = 0; i < array.GetLength(0); i++)
+                {
+                    int sum = 0;
+
+                    for (int j = 0; j < array.GetLength(1); j++)
+                    {
+                        sum += array[i, j];
+                    }
+
+                    Console.WriteLine(sum);
+                }
+            }
+            else if (choice == "4")
+            {
+                Person toji = new Person();
+                toji.Name = Console.ReadLine();
+                toji.Age = int.Parse(Console.ReadLine());
+                Console.WriteLine($"Modified name {toji.Name} with age of {toji.Age}");
+            } 
         }
-
-        Console.WriteLine(sum);
     }
 }
