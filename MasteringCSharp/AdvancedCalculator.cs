@@ -77,10 +77,11 @@ namespace MyApplication
             }
             else if (choice == "4")
             {
-                Person toji = new Person();
-                toji.Name = Console.ReadLine();
-                toji.Age = int.Parse(Console.ReadLine());
-                Console.WriteLine($"Modified name {toji.Name} with age of {toji.Age}");
+                Person human = new Person();
+                human.Name = Console.ReadLine();
+                human.Age = int.Parse(Console.ReadLine());
+                human.Nationality =  Console.ReadLine();
+                Console.WriteLine($"Modified name {human.Name} with age of {human.Age} and nationality of {human.Nationality}");
             } 
         }
     }

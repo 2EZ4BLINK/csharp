@@ -7,6 +7,8 @@ namespace MyApplication
         private string _name;
         private int _age;
 
+        public string Nationality {get; set;} 
+
         public string Name
         {
             get => _name;
@@ -14,7 +16,7 @@ namespace MyApplication
                 if(string.IsNullOrEmpty(value))
                 {
                     Console.WriteLine("Must enter a something!");
-                    _name = value;
+                    _name = "Default Name";
                 } else
                 {
                     _name = value;
@@ -33,7 +35,7 @@ namespace MyApplication
                 } else
                 {
                     Console.WriteLine("Too young!");
-                    _age = value;
+                    _age = 0;
                 }
             }
         }
