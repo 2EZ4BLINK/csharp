@@ -78,11 +78,17 @@ namespace MyApplication
             }
             else if (choice == "4")
             {
-                Person human = new Person();
-                human.Name = Console.ReadLine();
-                human.Age = int.Parse(Console.ReadLine());
-                human.Nationality =  Console.ReadLine();
-                Console.WriteLine($"Modified name {human.Name} with age of {human.Age} and nationality of {human.Nationality}");
+                Person personOne = new Person();
+                personOne.Name = Console.ReadLine();
+                personOne.Age = int.Parse(Console.ReadLine());
+                personOne.Nationality =  Console.ReadLine();
+                Console.WriteLine($"Modified name {personOne.Name} with age of {personOne.Age} and nationality of {personOne.Nationality}");
+            
+                Person personTwo = new Person();
+                personTwo.Name = "Toji";
+                personTwo.Age = 23;
+                personTwo.Nationality = "God";
+                personTwo.Walk();
             } 
             else if (choice == "5")
             {

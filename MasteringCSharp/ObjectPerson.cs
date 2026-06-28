@@ -4,9 +4,11 @@ namespace MyApplication
 {
     internal class Person
     {
+        // Field
         private string _name;
         private int _age;
 
+        // Property
         public string Nationality {get; set;} 
 
         public string Name
@@ -38,6 +40,12 @@ namespace MyApplication
                     _age = 0;
                 }
             }
+        }
+
+        // Method
+        public void Walk()
+        {
+            Console.WriteLine($"I'm {Name} {Age} y/o {Nationality} just walking");
         }
     }
 }
