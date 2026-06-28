@@ -28,5 +28,13 @@ namespace MyApplication
         {
             Name = name;
         }
+
+        // Method
+        public void SetDetails(string name, string address, string contacnNumber)
+        {
+            Name = name;
+            Address = address;
+            ContactNumber = contacnNumber;
+        }
     }
 }
