@@ -44,3 +44,24 @@ else if (choice == "2")
     AdventureGame adventure = new AdventureGame();
     adventure.Start();
 }
+else if (choice == "3")
+{
+    int[,] array =
+    {
+        { 1, 2, 3 },
+        { 4, 5, 6 },
+        { 7, 8, 9 }
+    };
+
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        int sum = 0;
+
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            sum += array[i, j];
+        }
+
+        Console.WriteLine(sum);
+    }
+}
