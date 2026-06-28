@@ -86,11 +86,13 @@ namespace MyApplication
             } 
             else if (choice == "5")
             {
+                Customer itadori = new Customer();
                 Customer toji = new Customer("toji");
                 Customer megumi = new Customer("megumi", "shibuya", "12345");
                 
                 Console.WriteLine($"Customer Name: {toji.Name}");
                 Console.WriteLine($"Customer Name: {megumi.Name}, Customer Address: {megumi.Address}, Customer Number: {megumi.ContactNumber}");
+                Console.WriteLine($"Customer Name: {itadori.Name}, Customer Address: {itadori.Address}, Customer Number: {itadori.ContactNumber}");
             }
         }
     }
