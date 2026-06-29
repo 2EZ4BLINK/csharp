@@ -18,10 +18,10 @@ namespace MyApplication
         }
 
         // Custom Constructor
-        public Customer(string name, string address, string contacnNumber) {
+        public Customer(string name, string address, string contactNumber = "123") {
             Name = name;
             Address = address;
-            ContactNumber = contacnNumber;
+            ContactNumber = contactNumber;
         }
 
         public Customer(string name)
@@ -30,11 +30,16 @@ namespace MyApplication
         }
 
         // Method
-        public void SetDetails(string name, string address, string contacnNumber)
+
+        // Named Parameter:
+        // Customer maki = new Customer();
+        // maki.SetDetails(name: "maki", address: "shibuya", contactNumber: "12345");
+        
+        public void SetDetails(string name, string address, string contactNumber)
         {
             Name = name;
             Address = address;
-            ContactNumber = contacnNumber;
+            ContactNumber = contactNumber;
         }
     }
 }

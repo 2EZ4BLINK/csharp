@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 
 namespace MyApplication
 {
@@ -94,9 +95,9 @@ namespace MyApplication
             {
                 Customer itadori = new Customer();
                 Customer toji = new Customer("toji");
-                Customer megumi = new Customer("megumi", "shibuya", "12345");
+                Customer megumi = new Customer("megumi", "shibuya");
                 Customer maki = new Customer();
-                maki.SetDetails("maki", "shibuya", "12345");
+                maki.SetDetails(name: "maki", address: "shibuya", contactNumber: "12345");
                 
                 Console.WriteLine($"Customer Name: {toji.Name}");
                 Console.WriteLine($"Customer Name: {megumi.Name}, Customer Address: {megumi.Address}, Customer Number: {megumi.ContactNumber}");
