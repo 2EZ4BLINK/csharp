@@ -19,8 +19,8 @@ namespace MyApplication
                 3
             ),
             new Question(
-                "What is the capital of Germany?",
-                ["Paris","Berlin","London","Madrid"],
+                "What is the strongest avenger?",
+                ["Spiderman","Thor","Hulk","Captain America"],
                 1
             ),
             };
