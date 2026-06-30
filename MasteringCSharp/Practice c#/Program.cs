@@ -120,9 +120,13 @@ namespace MasteringCSharp
             }
             else if(choice == "8")
             {
-                Dog dog = new Dog();
-                dog.MakeSound();
-                dog.Eating();
+                Dog bravo = new Dog("bravo", "husky");
+                bravo.MakeSound();
+                bravo.Eating();
+
+                Cat sidney = new Cat("sidney", "persian");
+                sidney.MakeSound();
+                sidney.Eating();
             }
         }
     }

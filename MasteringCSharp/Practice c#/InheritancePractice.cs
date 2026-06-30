@@ -11,14 +11,23 @@ public class InheritancePractice
 // Base Class / Parent Class / Super Class
 public class Animal
 {
+    public string Name {get; set;}
+    public string Breed {get; set;}
+
     public void Eating()
     {
-        Console.WriteLine("Eating...");
+        Console.WriteLine($"{Name} is eating his food");
     }
 
     public virtual void MakeSound()
     {
-        Console.WriteLine("Animal Sound");
+        Console.WriteLine($"Animal Sound of {Name}");
+    }
+
+    public Animal(string name, string breed)
+    {
+        Name = name;
+        Breed = breed;
     }
 }
 
@@ -28,7 +37,12 @@ public class Dog : Animal
     public override void MakeSound()
     {
         base.MakeSound();
-        Console.WriteLine("Woof Woof");
+        Console.WriteLine($"My {base.Breed} {base.Name} did Woof Woof");
+    }
+
+    public Dog(string name, string breed) : base(name, breed)
+    {
+        
     }
 }
 
@@ -37,7 +51,13 @@ public class Cat : Animal
 {
     public override void MakeSound()
     {
-        Console.WriteLine("Meow Meow");
+        base.MakeSound();
+        Console.WriteLine($"My {base.Breed} {base.Name} did Meow Meow");
+    }
+
+    public Cat(string name, string breed) : base(name, breed)
+    {
+        
     }
 }
 
@@ -47,6 +67,11 @@ public class ShihTzu : Dog
     public void Hyper()
     {
         Console.WriteLine("Super Hyper");
+    }
+
+    public ShihTzu(string name, string breed) : base(name, breed)
+    {
+        
     }
 }
 
