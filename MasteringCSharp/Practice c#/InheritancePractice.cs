@@ -25,3 +25,24 @@ public class Dog : Animal
         Console.WriteLine("Woof Woof");
     }
 }
+
+// Hierarchical Inheritance where multiple classes inherits the same base class
+public class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Meow Meow");
+    }
+}
+
+// Multi Level Inheritance where it inherits a class that also inherits a class
+public class ShihTzu : Dog
+{
+    public void Hyper()
+    {
+        Console.WriteLine("Super Hyper");
+    }
+}
+
+// 4th type of Inheritance is Multiple Inheritance where a class inherits multiple class
+// Example: public class A : B, C {} - but not allowed in c# but possible using Interface
