@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 
-namespace MyApplication
+namespace MasteringCSharp
 {
     internal class Program
     {
@@ -13,7 +13,9 @@ namespace MyApplication
             Console.WriteLine("3. Array Row Sums");
             Console.WriteLine("4. Object Practice");
             Console.WriteLine("5. Customer");
-            Console.WriteLine("6. LINQ");
+            Console.WriteLine("6. List");
+            Console.WriteLine("7. LINQ");
+            Console.WriteLine("8. Inheritance");
             
             string choice = Console.ReadLine();
 
@@ -110,12 +112,17 @@ namespace MyApplication
                 MyList list = new MyList();
                 list.SortedList();
                 list.HasLargeNumber();
-
             } 
             else if (choice == "7")
             {
              MyLinq list = new MyLinq();
              list.GetProductList();   
+            }
+            else if(choice == "8")
+            {
+                Dog dog = new Dog();
+                dog.Bark();
+                dog.Eating();
             }
         }
     }

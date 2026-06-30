@@ -1,6 +1,6 @@
 using System;
 
-namespace MyApplication
+namespace MasteringCSharp
 {
     internal class Customer
     {
