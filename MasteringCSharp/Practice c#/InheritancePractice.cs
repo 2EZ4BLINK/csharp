@@ -15,13 +15,19 @@ public class Animal
     {
         Console.WriteLine("Eating...");
     }
+
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Animal Sound");
+    }
 }
 
 // Derived Class / Sub Class / Child class who inherits the Base Class
 public class Dog : Animal
 {
-    public void Bark()
+    public override void MakeSound()
     {
+        base.MakeSound();
         Console.WriteLine("Woof Woof");
     }
 }
@@ -29,7 +35,7 @@ public class Dog : Animal
 // Hierarchical Inheritance where multiple classes inherits the same base class
 public class Cat : Animal
 {
-    public void Meow()
+    public override void MakeSound()
     {
         Console.WriteLine("Meow Meow");
     }

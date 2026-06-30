@@ -121,7 +121,7 @@ namespace MasteringCSharp
             else if(choice == "8")
             {
                 Dog dog = new Dog();
-                dog.Bark();
+                dog.MakeSound();
                 dog.Eating();
             }
         }
