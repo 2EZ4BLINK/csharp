@@ -34,6 +34,9 @@ public class Animal
 // Derived Class / Sub Class / Child class who inherits the Base Class
 public class Dog : Animal
 {
+
+    /// <summary>Makes a dog sound and gets the base class animal sound</summary>
+    /// <returns>The Dog Sound</returns>
     public override void MakeSound()
     {
         base.MakeSound();
