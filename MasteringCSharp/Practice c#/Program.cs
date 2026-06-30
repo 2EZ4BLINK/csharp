@@ -16,6 +16,7 @@ namespace MasteringCSharp
             Console.WriteLine("6. List");
             Console.WriteLine("7. LINQ");
             Console.WriteLine("8. Inheritance");
+            Console.WriteLine("9. Interface");
             
             string choice = Console.ReadLine();
 
@@ -127,6 +128,12 @@ namespace MasteringCSharp
                 Cat sidney = new Cat("sidney", "persian");
                 sidney.MakeSound();
                 sidney.Eating();
+            }
+            else if (choice == "9")
+            {
+                Pig pig = new Pig();
+                pig.MakeSound();
+                pig.Eat("Pedigree");
             }
         }
     }
