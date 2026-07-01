@@ -17,6 +17,7 @@ namespace MasteringCSharp
             Console.WriteLine("7. LINQ");
             Console.WriteLine("8. Inheritance");
             Console.WriteLine("9. Interface");
+            Console.WriteLine("10. Dependency Injection");
             
             string choice = Console.ReadLine();
 
@@ -134,6 +135,14 @@ namespace MasteringCSharp
                 Pig pig = new Pig();
                 pig.MakeSound();
                 pig.Eat("Pedigree");
+            }
+            else if (choice == "10")
+            {
+                // Constructor Dependecy Injection
+                Brush brush = new Brush();
+                Mapper map = new Mapper();
+                Clean clean = new Clean(brush, map);
+                clean.DoCleaning();
             }
         }
     }
