@@ -19,6 +19,7 @@ namespace MasteringCSharp
             Console.WriteLine("8. Inheritance");
             Console.WriteLine("9. Interface");
             Console.WriteLine("10. Dependency Injection");
+            Console.WriteLine("11. Struct and Date Time");
             
             string choice = Console.ReadLine();
 
@@ -156,6 +157,12 @@ namespace MasteringCSharp
                assembleComputer = new AssembleComputer();
                assembleComputer.ScrewDriverTool = screwDriver;
                assembleComputer.ScrewDriverTool.ScrewScrews();
+            }
+            else if (choice == "11")
+            {
+                StructAndDateTime date = new StructAndDateTime();
+                date.GetTime();
+                date.GetTimeWithFormat();
             }
         }
     }
