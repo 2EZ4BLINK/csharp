@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
+using System.Runtime.Intrinsics.Arm;
 
 namespace MasteringCSharp
 {
@@ -143,6 +144,18 @@ namespace MasteringCSharp
                 Mapper map = new Mapper();
                 Clean clean = new Clean(brush, map);
                 clean.DoCleaning();
+
+
+                // Setter Dependency Injection
+               Screw screw = new Screw();
+               AssembleComputer assembleComputer = new AssembleComputer();
+               assembleComputer.ScrewTool = screw;
+               assembleComputer.ScrewTool.ScrewScrews();
+
+               ScrewDriver screwDriver = new ScrewDriver();
+               assembleComputer = new AssembleComputer();
+               assembleComputer.ScrewDriverTool = screwDriver;
+               assembleComputer.ScrewDriverTool.ScrewScrews();
             }
         }
     }

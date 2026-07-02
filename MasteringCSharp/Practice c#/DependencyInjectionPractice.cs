@@ -1,8 +1,9 @@
 using System;
+using System.ComponentModel;
 
 namespace MasteringCSharp;
 
-
+// Constructor
 public class Brush
 {
  public void Use()
@@ -20,8 +21,8 @@ public class Mapper
 
 public class Clean
 {
-    private Brush _brush;
-    private Mapper _map;
+    private readonly Brush _brush;
+    private readonly Mapper _map;
 
     public Clean(Brush brush, Mapper map)
     {
@@ -35,3 +36,30 @@ public class Clean
         _map.Use();
     }
 } 
+
+
+
+// Setter
+public class Screw
+{
+     public void ScrewScrews()
+    {
+        Console.WriteLine("Screws...");
+    }
+}
+
+public class ScrewDriver
+{
+    public void ScrewScrews()
+    {
+        Console.WriteLine("Screwing screws...");
+    }
+}
+
+public class AssembleComputer
+{
+    public Screw ScrewTool {get;set;}
+    public ScrewDriver ScrewDriverTool {get;set;} 
+
+
+}
